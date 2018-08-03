@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+
+    "name": "График дежурств",
+    "version": "1.0",
+
+    "options_page": "settings.html",
+
+    "content_scripts": [
+        {
+            "matches": ["https://jira.zxz.su/secure/MailRuCalendar.jspa*"],
+            "js": ["jquery.js", "content.js"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+
+    "browser_action": {
+        "default_title": "Открыть график дежурств",
+        "default_icon": "48x48.png",
+        "default_popup": "popup.html"
+    }
+ }
