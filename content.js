@@ -24,14 +24,18 @@ function decoration() {
             decoration();
         } else {
             // Убирем номера тикетов
+            /*
             $('.fc-title').each(function() {
                 $(this).text( $(this).text().replace(/MTDUTY-\d+/, '') );
             });
+            */
 
             // Новая строка между статусами и именами
+            /*
             $('.jira-issue-status-lozenge').each(function() {
                 $(this).after('<br />');
             });
+            */
 
             // Выделяем черным фоном и жирным текстом собстенную фамилию
 			chrome.storage.sync.get(['lastname'], function(result) {
@@ -48,17 +52,16 @@ function decoration() {
                 $(this).hide();
             });
 
-
             // Делаем полупрозрачними всё кроме дежурств
             $('.jira-issue-status-lozenge').each(function() {
                 if ($(this).text() != 'Open' && $(this).text() != 'Нужен отгул' && $(this).text() != 'Отгул назначен') {
-                    $(this).parent().parent().fadeTo(200, 0.2);
+                    $(this).parent().parent().parent().fadeTo(200, 0.2);
 
-                    $(this).parent().parent().mouseenter(function() {
+                    $(this).parent().parent().parent().mouseenter(function() {
                         $(this).fadeTo(200, 1);
                     });
 
-                    $(this).parent().parent().mouseleave(function() {
+                    $(this).parent().parent().parent().mouseleave(function() {
                         $(this).fadeTo(200, 0.2);
                     });
                 }
