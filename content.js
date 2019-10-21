@@ -66,6 +66,9 @@ function decoration() {
                     });
                 }
             });
+
+            // максимальная ширина календаря
+            $('#calendar-full-calendar').attr("style", "max-width: 75em;");
         }
     }, 50);
 }
