@@ -24,18 +24,14 @@ function decoration() {
             decoration();
         } else {
             // Убирем номера тикетов
-            /*
             $('.fc-title').each(function() {
                 $(this).text( $(this).text().replace(/MTDUTY-\d+/, '') );
             });
-            */
 
             // Новая строка между статусами и именами
-            /*
             $('.jira-issue-status-lozenge').each(function() {
                 $(this).after('<br />');
             });
-            */
 
             // Выделяем черным фоном и жирным текстом собстенную фамилию
 			chrome.storage.sync.get(['lastname'], function(result) {
