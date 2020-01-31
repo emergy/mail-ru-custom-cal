@@ -69,6 +69,11 @@ function decoration() {
 
             // максимальная ширина календаря
             $('#calendar-full-calendar').attr("style", "max-width: 75em;");
+
+            // удалить иконку рядом со статусом
+            $('.fc-event-container .fc-content > img.calendar-event-issue-type').each(function() {
+                $(this).remove();
+            });
         }
     }, 50);
 }
