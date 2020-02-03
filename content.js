@@ -11,7 +11,11 @@ $(document).ready(function()
     }
 
     // Действие при нажатии кнопок смены месяца
-    $('.fc-button').click(function() {
+    $('.fc-prev-button').click(function() {
+        decoration();
+    });
+
+    $('.fc-next-button').click(function() {
         decoration();
     });
 });
@@ -67,9 +71,11 @@ function decoration() {
             $('#calendar-full-calendar').attr("style", "max-width: 75em;");
 
             // удалить иконку рядом со статусом
+            /*
             $('.fc-event-container .fc-content > img.calendar-event-issue-type').each(function() {
                 $(this).remove();
             });
+            */
         }
     }, 50);
 }
